@@ -2248,6 +2248,156 @@ section.visible {
 
 .projects.visible .project-card:nth-child(1) { transition-delay: 0.1s; }
 .projects.visible .project-card:nth-child(2) { transition-delay: 0.2s; }
+
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .unique {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-tagline {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: min(60vw, 280px);
+        height: min(60vw, 280px);
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-list li {
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    header {
+        padding: 14px 0;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .nav-links {
+        top: 72px;
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
+
+    .hero {
+        padding-top: 110px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.9rem, 8vw, 2.4rem);
+    }
+
+    .hero-role {
+        font-size: clamp(1rem, 4.8vw, 1.25rem);
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .about-content,
+    .contact-wrapper {
+        gap: 24px;
+    }
+
+    .about-img-container {
+        max-width: 300px;
+    }
+
+    .placeholder-image {
+        height: 280px;
+    }
+
+    .education-container {
+        padding: 24px;
+    }
+
+    .education-container::before {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 64px 0;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-image {
+        width: min(72vw, 240px);
+        height: min(72vw, 240px);
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .project-list li {
+        flex-direction: column;
+    }
+
+    .project-link {
+        margin-top: 4px;
+    }
+
+    .skill-category,
+    .project-card,
+    .contact-card,
+    .social-card,
+    .education-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .social-item {
+        gap: 12px;
+    }
+}
 .projects.visible .project-card:nth-child(3) { transition-delay: 0.3s; }
 
 .projects.visible .project-card {
