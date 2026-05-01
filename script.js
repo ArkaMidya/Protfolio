@@ -634,15 +634,15 @@ if(downloadResumeBtn && downloadResumeBtn.textContent.includes('Download Resume'
         
         document.body.appendChild(modal);
         
-        // View Resume - Opens in Google Drive
+        // View Resume - Opens in Google Drive preview (avoids double-preview images)
         document.getElementById('viewResume').addEventListener('click', () => {
-            window.open('https://drive.google.com/file/d/1uiX3B75WddM9BbQ-3Oy7SWMPNc0_wX5o/view?usp=drivesdk', '_blank');
+            window.open('https://drive.google.com/file/d/1Kyv51KOvD-SUoxEdFpWlCTixWAoyEC-c/preview', '_blank');
             document.body.removeChild(modal);
         });
         
         // Download Resume - Direct download
         document.getElementById('downloadResume').addEventListener('click', () => {
-            window.open('https://drive.google.com/uc?export=download&id=1uiX3B75WddM9BbQ-3Oy7SWMPNc0_wX5o', '_blank');
+            window.open('https://drive.google.com/uc?export=download&id=1Kyv51KOvD-SUoxEdFpWlCTixWAoyEC-c', '_blank');
             document.body.removeChild(modal);
         });
         
